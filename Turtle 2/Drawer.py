@@ -90,4 +90,4 @@ class Drawer(object):
         self._tur.goto(mFunc(0))
 
     def Clear(self):
-        self._tur.clear();
+        self._tur.clear()
