@@ -24,6 +24,9 @@
     <Compile Include="ArgCreator.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ArgType.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Drawer.py">
       <SubType>Code</SubType>
     </Compile>

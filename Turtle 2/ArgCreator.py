@@ -1,11 +1,4 @@
-from enum import Enum
-
-class ArgType(Enum):
-	LINE = 1
-	TRIANGLE = 2
-	SQUARE = 3
-	CIRCLE = 4
-	MANY_ANGLE = 5
+from ArgType import *
 
 class ArgCreator(object):
 

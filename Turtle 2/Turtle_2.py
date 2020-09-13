@@ -13,15 +13,11 @@ tr.begin_fill()
 drawer = Drawer(tr)
 argCreator = ArgCreator()
 
-
-try:
+choosen = ChooseFigure()
+while(choosen >= 1 and choosen <= 5):
+    index = choosen - 1
+    drawer.Draw(argType[index], argCreator.CreateArg)
     choosen = ChooseFigure()
-    while(choosen >= 1 and choosen <= 5):
-        index = choosen - 1
-        drawer.Draw(index, argCreator.CreateArg(argType[index]))
-        choosen = ChooseFigure()
-except:
-    pass 
 
 tr.end_fill()
 print("Выход из программы...")

@@ -1,21 +1,22 @@
+from ArgType import *
 from turtle import *
 from math import *
 
 class Drawer(object):
     _tur :Turtle
-    _actions :[]
+    _actions: dict
 
     def __init__(self, tur:Turtle):
         self._tur = tur
-        self._actions = [self.DrawLine,
-            self.DrawTriangle,
-            self.DrawSquare,
-            self.DrawCircle,
-            self.DrawManyAngle]
+        self._actions = {ArgType.LINE: self.DrawLine,
+            ArgType.TRIANGLE: self.DrawTriangle,
+            ArgType.SQUARE: self.DrawSquare,
+            ArgType.CIRCLE: self.DrawCircle,
+            ArgType.MANY_ANGLE: self.DrawManyAngle}
 
 
-    def Draw(self, index: int, arg):
-        self._actions[index](arg)
+    def Draw(self, argType: ArgType, funcToGetArg):
+        self._actions[argType](funcToGetArg(argType))
 
 
     def DrawLine(self, arg):
